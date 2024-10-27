@@ -1,4 +1,4 @@
-```json
+```groovy
 pipeline {
     agent any
     stages {
