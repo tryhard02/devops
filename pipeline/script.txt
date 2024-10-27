@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.9'
+    }
+    stages {
+        stage("Git Clone") {
+            steps {
+                git 'https://github.com/bushsk/hello-world.git'
+            }
+        }
+        stage("Build") {
+            steps {
+                bat 'mvn clean install'
+            }
+        }
+        stage("Deploy") {
+            steps {
+                 bat 'copy "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\maven-pipeline\\webapp\\target\\webapp.war" "D:\\Apache Tomcat Server\\webapps"'            }
+        }
+    }
+}
