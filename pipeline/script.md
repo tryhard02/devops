@@ -1,3 +1,7 @@
+2. **Create a New Item using Pipeline in Jenkins**
+3. **Scroll down to find text edior**
+4. **Paste the code down below and Save it**
+
 ```groovy
 pipeline {
     agent any
