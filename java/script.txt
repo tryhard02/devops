@@ -1,0 +1,3 @@
+pushp c:\Users\Admin\Desktop\New folder\
+javac test.java
+java test
